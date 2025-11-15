@@ -1,92 +1,99 @@
-AI Engineering Job Market Chatbot
-This project is a Streamlit application that combines a detailed AI engineering job market dataset with Google's Gemini 2.5 Flash generative AI to provide data-driven insights.
+<p align="center"> <img src="assets/ai_job_market_banner.png" alt="AI Job Market Insights Banner" width="70%"> </p>
+Chat with Data: AI Engineering Job Market Insights
+![Python](https://img.shields.io/badgehttps://img.shields.io/badge/Streamlit-%E2%9C%85-brighthttps://img.shields.io/badge
 
-Features
-Interactive chat UI built on Streamlit for natural language queries.
+Welcome! This Streamlit app lets you explore the 2025 AI engineering job market using real-world data and the power of Google Gemini generative AI. Instantly get insights about skills, tools, salaries, industries, and job requirements—all through simple natural language chat!
 
-Data querying and aggregation from a comprehensive AI job market dataset (ai_job_market.csv), including:
+🚀 Features
+🤖 Conversational Q&A about AI and data roles, powered by Google Gemini LLM
 
-Skills and tools required per role and experience level.
+📊 Analysis of dataset-driven skills, requirements, tools, salary ranges, and industries
 
-Average salary ranges by role and level.
+🔍 Skill overlap and role comparison queries supported
 
-Industry demand insights.
+📝 Create GitHub support tickets directly from the UI
 
-Skill overlaps between job titles and levels.
+🧑‍💻 Modern sidebar with dataset highlights for quick reference
 
-Integration with Google Gemini 2.5 Flash model to generate concise, enriched answers based on dataset context.
+📺 Demo
+![App Screenshot](screenshots/screenshot.jpg Highlights
 
-GitHub issue creation support directly from the app to report issues or feedback.
+Experience Levels: Entry, Junior, Middle, Senior, Lead
 
-Sidebar displaying dataset highlights for quick reference.
+Job Roles:
 
-Dataset
-The dataset powers the chatbot's data-driven answers and contains around AI engineering job market data with fields such as:
+AI Product Manager
 
-Job titles (e.g., AI Product Manager, NLP Engineer)
+AI Researcher
 
-Experience levels (Entry, Junior, Middle, Senior, Lead)
+Computer Vision Engineer
 
-Skills required and preferred tools
+Data Analyst
 
-Salary ranges (USD)
+Data Scientist
 
-Industry and location info
+ML Engineer
 
-Getting Started
-Prerequisites
-Python 3.8+
+NLP Engineer
 
-Google Cloud project with access to Generative Language API
+Quant Researcher
 
-Google Gemini API key
+Other Columns: Required skills, preferred tools, salary (USD), region, industry
 
-GitHub personal access token (with repo permissions)
-
-Installation
-Clone the repo:
+🛠️ Installation
+Clone the Repo
 
 bash
-git clone https://github.com/16bitSega/Chat_with_data
-cd <repo_directory>
-Install dependencies:
+git clone https://github.com/<your_user>/<repo>.git
+cd <repo>
+Install dependencies
 
 bash
 pip install -r requirements.txt
-Set environment variables in .env file:
+Create .env file in project root:
 
 text
 GEMINI_API_KEY=your_google_gemini_key
 GITHUB_TOKEN=your_github_token
 GITHUB_REPO=your_github_user/repo_name
-Place the ai_job_market.csv dataset in the root directory.
+Add dataset:
+Place ai_job_market.csv in the root directory.
 
-Running the app
-Run the Streamlit app locally:
-
+▶️ Running the App
 bash
 streamlit run main.py
-Open the displayed URL (usually http://localhost:8501) to start interacting.
+Visit the printed localhost URL and interact via the browser UI.
 
-How to Use
-Enter free-text questions about AI engineering jobs, e.g.:
+💡 How to Use
+Ask any question about roles, skills, salaries, or AI job market trends:
 
-"What is the average salary for a mid-level ML engineer?"
+What is the average salary for a middle ML engineer?
 
-"What skills overlap between entry NLP engineer and senior AI product manager?"
+What skills overlap between entry NLP engineer and middle AI Product Manager?
 
-"Which industries demand AI researchers?"
+Which industries demand AI researchers most?
 
-Review answers enriched by the dataset and Google Gemini generative AI.
+Review answers and dataset-driven breakdowns.
 
-Create GitHub support tickets from the UI if you spot issues or need improvements.
+Submit GitHub bug reports or feature requests from the web UI.
 
-Extending
-Add more complex natural language parsing or entity extraction to handle advanced queries.
+🌟 Example Questions
+Which industries demand Data Scientists most?
 
-Extend the dataset with more job roles, geographic data, or time-based trends.
+What skills are required for a junior Computer Vision Engineer?
 
-Add visualization dashboards for richer insights beyond conversational Q&A.
+What is the average salary of a senior AI Product Manager?
 
-License
-This project is licensed under the MIT License.
+Which tools are essential for an entry-level NLP Engineer?
+
+What skills overlap between Data Analyst and Data Scientist?
+
+💻 Extending
+Add more role/industry mappings, user analytics, or charts
+
+Expand dataset for other regions or years
+
+Enhance the prompt logic for more advanced question types
+
+📄 License
+MIT
