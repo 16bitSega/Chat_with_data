@@ -121,7 +121,7 @@ User is asking **What skills overlap between entry NLP Engineer and middle AI Pr
 
 This action is searching for Skills that are represented in roles matching their levels
 
-![Full interaction](screenshots/answer.png)
+![Answering the question](screenshots/answer.png)
 
 ---
 
@@ -135,6 +135,13 @@ This screenshot shows a real console session during interaction, confirming that
 - Database queries are executed and results printed to the console
 
 ![Console logs](screenshots/console.png)
+
+### Ticket creation (`ticket.png`)
+
+The form allows you to add the title and description, and the ticket will be added to the **Issues**
+On the GitHub page related to the project.
+
+![Ticket creation](screenshots/ticket.png)
 
 📄 License
 MIT
