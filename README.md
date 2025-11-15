@@ -1,99 +1,140 @@
-<p align="center"> <img src="assets/ai_job_market_banner.png" alt="AI Job Market Insights Banner" width="70%"> </p>
-Chat with Data: AI Engineering Job Market Insights
-![Python](https://img.shields.io/badgehttps://img.shields.io/badge/Streamlit-%E2%9C%85-brighthttps://img.shields.io/badge
+# Chat with Data: AI Engineering Job Market Insights
 
-Welcome! This Streamlit app lets you explore the 2025 AI engineering job market using real-world data and the power of Google Gemini generative AI. Instantly get insights about skills, tools, salaries, industries, and job requirements—all through simple natural language chat!
+Welcome! This Streamlit app helps you chat with the 2025 AI engineering job market dataset using Google Gemini LLM. Instantly discover skills, tools, salaries, industry trends, and compare roles—using natural language Q&A.
 
 🚀 Features
-🤖 Conversational Q&A about AI and data roles, powered by Google Gemini LLM
+Conversational Q&A on AI job market insights
 
-📊 Analysis of dataset-driven skills, requirements, tools, salary ranges, and industries
+Dataset-powered answers about skills, tools, salaries, industry demand, and roles
 
-🔍 Skill overlap and role comparison queries supported
+Skill overlap and comparison between roles or experience levels
 
-📝 Create GitHub support tickets directly from the UI
+GitHub issue creation for instant feedback and support
 
-🧑‍💻 Modern sidebar with dataset highlights for quick reference
+Sidebar with dataset highlights for fast reference
 
-📺 Demo
-![App Screenshot](screenshots/screenshot.jpg Highlights
-
-Experience Levels: Entry, Junior, Middle, Senior, Lead
+📦 Dataset Highlights
+Experience Levels:
+Entry, Junior, Middle, Senior, Lead
 
 Job Roles:
 
 AI Product Manager
-
 AI Researcher
-
 Computer Vision Engineer
-
 Data Analyst
-
 Data Scientist
-
 ML Engineer
-
 NLP Engineer
-
 Quant Researcher
 
-Other Columns: Required skills, preferred tools, salary (USD), region, industry
+Other columns: required skills, preferred tools, salary (USD), region, industry
 
-🛠️ Installation
-Clone the Repo
+## 🛠️ Installation & Setup
 
-bash
-git clone https://github.com/<your_user>/<repo>.git
-cd <repo>
-Install dependencies
+### 1 Clone the repository
 
-bash
+```bash
+git clone https://github.com/16bitSega/Chat_with_data.git
+cd Chat_with_data
+```
+
+### 2 Create a virtual environment (optional but recommended)
+
+```bash
+python -m venv venv
+# macOS / Linux
+source venv/bin/activate
+# Windows
+venv\Scriptsctivate
+```
+
+### 3 Install dependencies
+
+```bash
 pip install -r requirements.txt
-Create .env file in project root:
+```
 
-text
-GEMINI_API_KEY=your_google_gemini_key
+`requirements.txt` includes:
+
+```text
+streamlit
+pandas
+numpy
+python-dotenv
+google-genai
+requests
+```
+
+---
+
+### 4 Configure environment variables (`.env`)
+
+Create a file named `.env` in the `Chat_with_data` directory (next to `main.py`):
+PS: You could ignore the part related to GITHUB if you are not waiting for a support ticket addressing your account :)
+
+```env
+GOOGLE_API_KEY=your_gemini_api_key_here
 GITHUB_TOKEN=your_github_token
 GITHUB_REPO=your_github_user/repo_name
-Add dataset:
-Place ai_job_market.csv in the root directory.
+```
+
+#### 4.1 Get a Gemini API key
+
+1. Open **Google AI Studio**.
+2. Sign in and go to the **API Keys** section.
+3. Create a new API key and copy it into `GOOGLE_API_KEY`.
+
+### 5. Add dataset: Place ai_job_market.csv in the project root.
 
 ▶️ Running the App
-bash
+
+From the `Chat_with_data` directory:
+
+```bash
 streamlit run main.py
-Visit the printed localhost URL and interact via the browser UI.
+```
 
-💡 How to Use
-Ask any question about roles, skills, salaries, or AI job market trends:
+Streamlit will print a local URL (usually `http://localhost:8501`) — open it in your browser.
 
-What is the average salary for a middle ML engineer?
+---
 
-What skills overlap between entry NLP engineer and middle AI Product Manager?
+## Usage workflow with screenshots
 
-Which industries demand AI researchers most?
+### Initial state — Home screen (`home.png`)
 
-Review answers and dataset-driven breakdowns.
+When you open the app, you see:
 
-Submit GitHub bug reports or feature requests from the web UI.
+- The app title and description.
+- Dataset information on the left sidebar
+- A **Example questions** section to help you get started.
 
-🌟 Example Questions
-Which industries demand Data Scientists most?
+This represents the initial state of the Data Insights App before any user interaction.
 
-What skills are required for a junior Computer Vision Engineer?
+![Home screen](screenshots/home.png)
 
-What is the average salary of a senior AI Product Manager?
+---
 
-Which tools are essential for an entry-level NLP Engineer?
+### Answering the question (`answer.png`)
 
-What skills overlap between Data Analyst and Data Scientist?
+User is asking **What skills overlap between entry NLP Engineer and middle AI Product Manager?**
 
-💻 Extending
-Add more role/industry mappings, user analytics, or charts
+This action is searching for Skills that are represented in roles matching their levels
 
-Expand dataset for other regions or years
+![Full interaction](screenshots/answer.png)
 
-Enhance the prompt logic for more advanced question types
+---
+
+### Console logs (`console.png`)
+
+The app logs key events to the console using Python’s `logging` module
+
+This screenshot shows a real console session during interaction, confirming that:
+
+- The agent uses function calling to invoke tools
+- Database queries are executed and results printed to the console
+
+![Console logs](screenshots/console.png)
 
 📄 License
 MIT
